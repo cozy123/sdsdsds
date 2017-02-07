@@ -1,4 +1,4 @@
-var bird;
+
 function setup() {
  	createCanvas(1015, 803)
  	bird = new bird();
