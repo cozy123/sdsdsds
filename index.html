@@ -4,7 +4,12 @@
 
   <head>
 		<script>
-	var bird;
+	var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'green';
+ctx.fillRect(10, 10, 100, 100);
+			
 function setup() {
  	createCanvas(1015, 803)
  	bird = new bird();
@@ -13,8 +18,16 @@ function setup() {
 function draw() {
 	background(0);
 	bird.show();
-}	  </script>
-  	    <script src="bird.js"></script>
+}
+	function Bird() {
+	this.y = width/2;
+
+	this.show = function() {
+		fill(255)
+		ellipse(this.x, this.y, 16, 16);
+	}
+}  </script>
+  	    
   </head>
 
   <body>
